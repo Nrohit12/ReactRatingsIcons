@@ -1,0 +1,171 @@
+.App {
+  text-align: center;
+  background-color: #270082;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.header h2 {
+  color: #f1d00a;
+  padding: 85px;
+}
+.header p {
+  color: #ffff;
+}
+.header span {
+  color: #ff008e;
+}
+.widgets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer h3 {
+  color: #e7ae11;
+  padding: 45px;
+}
+
+.svg {
+  transform: rotate(-90deg);
+  margin: 25px;
+}
+
+.svg-circle {
+  fill: none;
+}
+
+.svg-circle-bg {
+  fill: white;
+}
+
+.progress-text {
+  text-anchor: middle;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.labels-div {
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  /* position: relative; */
+  margin: auto;
+}
+
+.rate-yourself {
+  max-width: 400px;
+  margin: auto;
+}
+
+.rate-yourself img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.rate-yourself p {
+  color: #eeeeee;
+}
+
+.rate-yourself span {
+  color: #d1d1d1;
+  font-weight: 300;
+}
+.triangular-levels {
+  height: 40px;
+  border-radius: 20px;
+  display: block;
+  padding: 0;
+  margin: 25px auto;
+  min-width: 60px;
+}
+
+.triangular-levels:first-child {
+  margin: 0 auto;
+}
+
+.triangular-levels:last-child {
+  margin: 0 auto;
+}
+
+.active {
+  background-color: white;
+}
+
+.inactive {
+  background-color: #d1d1d1;
+}
+/* 
+.triangular-border {
+  border-style: solid;
+  border-color: transparent #35858b #35858b #35858b;
+
+  display: inline-block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+.submit-button {
+  margin: 50px auto;
+}
+
+.submit-button button {
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #270082;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.submit-button button:hover {
+  background-color: #ff008e;
+  color: white;
+}
+
+
+
+.banner {
+  background-color: #fffdde;
+  position: absolute;
+  top: 20% ;
+  left: 25%;
+  width: 50%;
+  border-radius: 20px;
+}
+
+.banner .happy-gif {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  display: block;
+  margin: 30px auto;
+}
+
+.banner p{
+  text-align: center;
+  margin: 25px;
+  color: crimson;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (width < 900px) {
+  .widgets {
+    display: block;
+  }
+  .labels-div {
+    margin: 40px auto;
+  }
+}

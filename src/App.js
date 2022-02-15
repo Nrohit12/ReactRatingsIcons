@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./assets/styles.css";
+import Widgets from "./components/widgets";
+import getDimensions from "./hooks/windowDimensions";
 
 function App() {
+  const [windowDimension, setWindowDimension] = React.useState(getDimensions());
+
+  React.useLayoutEffect(() => {
+    function updateSize() {
+      setWindowDimension(getDimensions());
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
+ 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="header">
+        <h2>Rate your love for samosa and Jalebi.</h2>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Rate your love for Samosa with Circular Label{" "}
+          <span>
+            {windowDimension.innerWidth > 900 ? "on the left" : "down"}{" "}
+          </span>
+          and for Jalebi with Triangular Label{" "}
+          <span>
+            {windowDimension.innerWidth > 900 ? "on the right" : "below"}
+          </span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+
+      <div>
+        <Widgets/>
+      </div>
+      
+      <footer className="footer">
+        <h3>
+          Oops you have reached the end of the page. Scroll up to rate your love for the cusine
+        </h3>
+      </footer>
     </div>
   );
 }
